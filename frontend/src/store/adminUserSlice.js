@@ -38,7 +38,7 @@ export const updateUser = createAsyncThunk(
   'adminUsers/updateUser',
   async ({ id, userData }, { rejectWithValue }) => {
     try {
-      const response = await axios.put(`${API_URL}/${id}/`, userData);
+      const response = await axios.put(`${API_URL}${id}/`, userData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);

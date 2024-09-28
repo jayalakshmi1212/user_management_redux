@@ -100,9 +100,9 @@ const LoginSignup = () => {
             <div className="form-container sign-up">
                 <form onSubmit={formikSignup.handleSubmit}>
                     <h1>Create Account</h1>
-                    <div className="social-icons">
+                    {/* <div className="social-icons">
                         <a href="#" className="icon"><FontAwesomeIcon icon={faGoogle} /></a>
-                    </div>
+                    </div> */}
                     <span>or use your email for register</span>
                     <input
                         type="text"
@@ -135,9 +135,9 @@ const LoginSignup = () => {
             <div className="form-container sign-in">
                 <form onSubmit={formikLogin.handleSubmit}>
                     <h1>Sign In</h1>
-                    <div className="social-icons">
+                    {/* <div className="social-icons">
                         <a href="#" className="icon"><FontAwesomeIcon icon={faGoogle} /></a>
-                    </div>
+                    </div> */}
                     <span>or use your email and password</span>
                     <input
                         type="email"
