@@ -39,12 +39,20 @@ class UserListCreateView(generics.ListCreateAPIView):
 
 
 class UserDetailView(APIView):
+    def get(self, request, pk):
+        try:
+            user = User.objects.get(pk=pk)
+            serializer = UserSerializer(user)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except User.DoesNotExist:
+            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+
     def put(self, request, pk):
         try:
             user = User.objects.get(pk=pk)
         except User.DoesNotExist:
             return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
-        
+
         serializer = UserSerializer(user, data=request.data)
         if serializer.is_valid():
             serializer.save()
