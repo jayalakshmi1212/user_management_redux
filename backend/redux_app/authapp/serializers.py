@@ -2,6 +2,9 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 
+#UserSerializer takes all all field of the user model but profile picture is not in the user model
+#  thats why it take profile picture from the related profile model using this (source='profile.profile_picture', read_only=True)
+
 class UserSerializer(serializers.ModelSerializer):
     profile_picture = serializers.ImageField(source='profile.profile_picture', read_only=True)
     class Meta:

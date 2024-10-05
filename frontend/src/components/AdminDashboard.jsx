@@ -255,6 +255,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers, createUser, updateUser, deleteUser } from '../store/adminUserSlice';
 import { FaSearch, FaUserPlus, FaEdit, FaTrash, FaSave, FaTimes, FaSpinner } from 'react-icons/fa';
 import '../style/AdminDashboard.css';
+import { Link } from 'react-router-dom'; 
+
 
 const AdminDashboard = () => {
   const dispatch = useDispatch();
@@ -296,6 +298,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="admin-dashboard">
+       
       <header className="dashboard-header">
         <h1>Admin Dashboard</h1>
         <div className="search-bar">
@@ -307,6 +310,13 @@ const AdminDashboard = () => {
             placeholder="Search users..." 
           />
         </div>
+        <ul className="nav-links">
+          <li>
+            <Link to="/admin/login" className="logout-link">
+              Logout
+            </Link>
+          </li>
+        </ul>
       </header>
 
       {loading && (
@@ -410,8 +420,11 @@ const AdminDashboard = () => {
               </tbody>
             </table>
           </div>
+          
         </section>
+        
       </main>
+     
     </div>
   );
 };

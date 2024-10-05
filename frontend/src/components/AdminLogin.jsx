@@ -114,7 +114,7 @@ export default function AdminLogin() {
         {error && <p className="error">{error}</p>} {/* Display error message */}
 
         <div className="input-group">
-          <FaUser className="icon" />
+          
           <input
             type="text"
             name="username"
@@ -127,7 +127,7 @@ export default function AdminLogin() {
         </div>
 
         <div className="input-group">
-          <FaLock className="icon" />
+          
           <input
             type="password"
             name="password"
@@ -144,9 +144,7 @@ export default function AdminLogin() {
           {loading ? 'Logging in...' : 'Login'}
         </button>
 
-        <div className="form-footer">
-          <a href="#">Forgot Password?</a>
-        </div>
+       
       </form>
     </div>
   );

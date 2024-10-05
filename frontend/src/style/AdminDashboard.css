@@ -217,3 +217,17 @@ tr:hover {
     margin-top: 20px;
   }
 }
+.logout-link {
+  color: white;
+  background-color: #ff4d4d;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logout-link:hover {
+  background-color: #ff6666;
+}

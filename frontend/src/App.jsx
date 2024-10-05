@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import LoginSignup from './components/Login'
 import HomePage from './components/Home'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -7,9 +7,13 @@ import store from "./store/store";
 import EditProfile from './components/Editprofile';
 import AdminLogin from './components/AdminLogin';
 import AdminDashboard from './components/AdminDashboard';
+import { preventNavigation } from './utils/preventNavigation';
 
 function App() {
   const [count, setCount] = useState(0)
+  useEffect(() => {
+    preventNavigation();
+  }, []);
 
   return (
     <Provider store={store}>

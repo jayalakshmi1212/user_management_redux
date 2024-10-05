@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@100&family=Recursive:wght@300&family=Righteous&family=Roboto:wght@100&family=Young+Serif&display=swap');
 
 body {
-    font-family: 'Great Vibes', cursive;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Recursive', sans-serif;
-    font-family: 'Righteous', cursive;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Young Serif', serif;
-
-    /* background: url(https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80) no-repeat, center center; */
-    background-size: fit-content;
-    background-position-x: 90%;
-    background-position-y: 15%;
+    font-family: 'Raleway', sans-serif; /* Choose a primary font and add fallbacks */
+    background-color: #f5f5f5; /* Add a subtle background color for contrast */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -24,50 +18,35 @@ h1 {
 }
 
 nav {
-    overflow: hidden;
-    color: black;
+    background-color: white;
+    border-bottom: 2px solid #ddd;
 }
 
 nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+}
+
+nav ul li {
+    margin-right: 20px;
 }
 
 nav a {
-    float: right;
-    text-align: center;
-    padding: 7px;
     text-decoration: none;
-    color: inherit;
-}
-
-#left {
-    float: left;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav a:hover {
     background-color: black;
-    color: lightblue;
-}
-
-li a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    border: solid black;
-    padding: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 50px;
-    margin-bottom: -20px;
-    box-shadow: 1px 1px 1px black;
-}
-
-li a:hover {
-    background-color: black;
     color: pink;
-    box-shadow: 2px 2px 1px #8d8d8d;
+    box-shadow: 2px 2px 5px #8d8d8d;
 }
 
 #content {
@@ -79,18 +58,12 @@ li a:hover {
 
 .fade-in {
     opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 2s;
+    animation: fadeInOpacity 2s ease-in 1;
 }
 
 .fade-in-2 {
     opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 4s;
+    animation: fadeInOpacity 4s ease-in 1;
 }
 
 .footer {
